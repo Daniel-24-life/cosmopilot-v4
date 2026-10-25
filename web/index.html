@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="知微 CosmoPilot V4.0 公开参考版：合成会话、时点证据、草稿复核与本地反馈。">
+  <title>知微 CosmoPilot · V4.0 公开参考版</title>
+  <link rel="stylesheet" href="/styles.css"><script defer src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">跳到工作区</a>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon" aria-hidden="true">知</span><div><strong>知微 CosmoPilot</strong><span>消费者服务决策工作台</span></div></div>
+    <div class="top-state"><span class="version">V4.0 · 公开参考版</span><span id="connection" role="status">连接本地服务中…</span><button id="retry" hidden>重新连接</button></div>
+  </header>
+  <div class="boundary"><strong>离线参考演示</strong><span>6 条独立编写的合成会话 · 不读取竞赛原始数据 · 无模型调用、对外发送或真实售后操作</span></div>
+  <main id="workspace" class="workspace" tabindex="-1">
+    <aside class="inbox" aria-labelledby="inbox-title">
+      <div class="inbox-head"><p class="eyebrow">服务队列</p><h1 id="inbox-title">从一通进线开始</h1><p>五类服务，六个可检查的例子。</p></div>
+      <label class="search-label" for="search">查找合成会话</label><input id="search" type="search" placeholder="服务类型或会话标题">
+      <div id="sessions" class="sessions" aria-label="合成会话列表"></div>
+      <div class="inbox-foot"><strong>服务类型</strong><p>选品咨询 / 不良反应 / 售后退货 / 补发换货 / 订单款项</p><a href="https://github.com/Daniel-24-life/cosmopilot-v4">项目说明与源码 ↗</a></div>
+    </aside>
+    <section class="conversation" aria-labelledby="case-title">
+      <header class="case-head"><div><p class="eyebrow" id="case-id">合成场景</p><h2 id="case-title">选择一条会话</h2></div><span id="risk" class="badge">等待选择</span></header>
+      <div class="context-controls"><label for="cutoff">可见消息时点</label><select id="cutoff" disabled><option>等待会话</option></select><button id="analyze" class="secondary" disabled>重新分析</button></div>
+      <div id="messages" class="messages"><p>选择左侧会话，查看对话和证据如何对应。</p></div>
+      <section class="draft-card" aria-labelledby="draft-title">
+        <div class="section-head"><div><p class="eyebrow">人工工作区</p><h2 id="draft-title">候选回复草稿</h2></div><span class="badge neutral">未发送</span></div>
+        <p class="help">固定样例规则生成候选文本。编辑、复制和采纳都不代表已发送。</p>
+        <label for="draft">可编辑终稿</label><textarea id="draft" rows="4" disabled placeholder="分析完成后在这里核对与修改。"></textarea>
+        <p id="draft-status" class="draft-status" role="status"></p>
+        <button id="replace" class="text-button" disabled>用当前候选替换草稿</button>
+        <fieldset id="review-checks" hidden><legend>高风险人工核对</legend><label><input id="check-evidence" type="checkbox">我已核对当前证据和缺口</label><label><input id="check-safe" type="checkbox">我已核对草稿措辞与承诺边界</label></fieldset>
+        <div class="actions"><button id="adopt" class="primary" disabled>采纳并记录</button><button id="reject" class="secondary" disabled>拒绝建议</button><button id="copy" class="secondary" disabled>复制草稿</button></div>
+        <p id="message" role="status" class="operation-message"></p><p id="error" role="alert" class="error"></p>
+      </section>
+    </section>
+    <aside class="decision" aria-labelledby="decision-title">
+      <div class="decision-heading"><p class="eyebrow">可检查的决策依据</p><h2 id="decision-title">先看证据，再做回应</h2><p id="decision-summary">本地规则 · 固定合成样例</p></div>
+      <div class="view-switch" aria-label="切换依据面板"><button data-view="evidence" aria-pressed="true">证据</button><button data-view="trace" aria-pressed="false">Trace</button><button data-view="state" aria-pressed="false">状态</button></div>
+      <div id="evidence-view"><div class="evidence-legend"><span>已核对事实</span><span>买家自述</span><span>系统推断</span></div><div id="evidence"></div><section class="gaps"><h3>还缺什么</h3><ul id="gaps"><li>分析后列出核验缺口</li></ul></section></div>
+      <div id="trace-view" hidden><p class="help">以下为这次本地计算的实际耗时，不是模型推理或生产性能评测。</p><ol id="trace" class="trace"></ol></div>
+      <div id="state-view" hidden><dl id="states" class="states"></dl><h3>最近本地反馈</h3><div id="history"></div><p class="help">源工单、本地采纳和对外发送分开记录。SQLite 只保存本地演示反馈。</p></div>
+      <details class="json"><summary>查看当前分析 JSON</summary><pre tabindex="0" id="json">尚未分析</pre></details>
+    </aside>
+  </main>
+  <footer>V4.0 机制的公开重建 · 保留产品思路与工程参考，非原始交付镜像 · 无官方背书或生产效果声明</footer>
+</body>
+</html>

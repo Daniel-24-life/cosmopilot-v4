@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+<title id="title">知微 CosmoPilot V4.0</title><desc id="desc">消费者服务、证据与人工决策。V4.0 离线公开参考版。</desc>
+<rect width="1280" height="400" rx="20" fill="#f4f0ff"/>
+<path d="M950 0H1280V400H1100L950 250Z" fill="#e5d9f8"/>
+<g font-family="Segoe UI,Microsoft YaHei,sans-serif">
+<rect x="64" y="54" width="238" height="34" rx="7" fill="#6d28d9"/>
+<text x="81" y="77" font-size="16" fill="white">V4.0 · OFFLINE REFERENCE</text>
+<text x="64" y="166" font-size="51" font-weight="700" fill="#231a36">知微 CosmoPilot</text>
+<text x="66" y="220" font-size="25" fill="#4c3a66">让服务回复，有依据、有复核、有边界。</text>
+<text x="66" y="278" font-size="18" fill="#625477">五类服务 / 时点证据 / 人工草稿 / 本地反馈</text>
+<text x="66" y="341" font-size="16" fill="#625477">Python · SQLite · Native Web UI</text>
+<g transform="translate(870 80)">
+<rect width="315" height="245" rx="16" fill="#fff" stroke="#c5b1e0"/>
+<text x="24" y="40" font-size="15" font-weight="700" fill="#6d28d9">EVIDENCE → REVIEW → RECORD</text>
+<path d="M34 72V191" fill="none" stroke="#cfbce9" stroke-width="2"/>
+<g fill="#6d28d9"><circle cx="34" cy="80" r="7"/><circle cx="34" cy="132" r="7"/><circle cx="34" cy="184" r="7"/></g>
+<g font-size="18" fill="#231a36"><text x="58" y="86">核对事实与缺口</text><text x="58" y="138">保留人工判断</text><text x="58" y="190">记录，不越权执行</text></g>
+<text x="24" y="226" font-size="13" fill="#625477">6 SYNTHETIC CASES · NO MODEL CALLS</text>
+</g></g></svg>

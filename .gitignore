@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.runtime/
+.pytest_cache/
+tmp/
+.env*
+config.local.json
+*.db
+*.db-wal
+*.db-shm
