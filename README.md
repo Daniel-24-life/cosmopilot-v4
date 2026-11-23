@@ -1,8 +1,14 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/cover-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/cover-light.svg">
+  <img src="docs/cover-light.svg" alt="Project overview" width="1280">
+</picture>
+
 # CosmoPilot V4.0
 
 An offline consumer-service workbench that brings conversation evidence, draft review, and local feedback into one view.
 
-[中文说明](README.zh.md) · [Portfolio](https://github.com/Daniel-24-life/AIfile)
+[中文说明](README.zh.md) · [Portfolio](https://github.com/Daniel-24-life/portfolio)
 
 ![CosmoPilot desktop workbench captured with synthetic sessions](docs/assets/workbench-desktop.png)
 

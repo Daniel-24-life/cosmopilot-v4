@@ -1,4 +1,9 @@
-# 版本记录
+# Changelog
+
+## 2026-11-23
+
+- Added light and dark covers for point-in-time evidence and protected draft edits.
+- Consolidated the default English overview and kept the Chinese entry.
 
 ## v4.0 — 2026-10-25
 

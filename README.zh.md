@@ -1,13 +1,14 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg">
-  <img src="docs/assets/cover-light.svg" width="1280" alt="知微 CosmoPilot V4.0：消费者服务、证据与人工决策">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/cover-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/cover-light.svg">
+  <img src="docs/cover-light.svg" alt="Project overview" width="1280">
 </picture>
 
 # 知微 CosmoPilot · V4.0
 
 把一通消费者进线，整理成有依据、可复核的服务回复。
 
-[English](README.en.md) · [完整作品集](https://github.com/Daniel-24-life/AIfile) · [AI Coding 实践](docs/ai-coding.md) · [源码阅读路线](docs/source-reading.md)
+[English](README.md) · [完整作品集](https://github.com/Daniel-24-life/portfolio) · [AI Coding 实践](docs/ai-coding.md) · [源码阅读路线](docs/source-reading.md)
 
 这是知微 V4.0 产品机制的**离线公开参考版**。围绕五类服务，保留证据分层、消息时点、人工草稿保护和本地反馈闭环。界面、代码与 6 条合成会话面向公开展示重建，不是竞赛原始工程的镜像。
 
